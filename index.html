@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<script src="./app/index.js"></script>
+<link rel="stylesheet" type="text/css" href="./style.css">
+  <meta charset="utf-8">
+  <title>Node api tutorial</title>
+</head>
+<body>
+
+  <div id='app' ng-app='app' ng-controller='mainCtrl'>
+
+    <ul>
+      <li ng-repeat='msg in msgs' class='message'>
+        <message body='msg' ></message>
+      </li>
+    </ul>
+    <div class='footer'>
+      <form class='form' name='message' ng-submit='sendMessage(message)'>
+        <textarea class='text-input' placeholder='Chat Message' ng-model='message.body'></textarea>
+        <button class='btn' type='submit'>Send</button>
+      </form>
+    </div>
+
+  </div>
+
+</body>
+</html>

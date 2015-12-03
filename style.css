@@ -1,0 +1,55 @@
+html * {
+  padding: 0;
+  margin: 0;
+}
+
+html, body, #app {
+  height: 100%;
+  margin-bottom: 8em;
+}
+
+
+
+.Message {
+  color: white;
+  font-size: 1.1em;
+  background-color: #26CF28;
+  margin: 8px 0;
+  padding: 12px;
+}
+
+.message:last-child {
+  margin-bottom: 8em;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5em;
+  background-color: #E2E4E3;
+  padding: 1em;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+.text-input {
+  width: 60%;
+  padding: .5em;
+  font-size: 1.2em;
+}
+
+.btn {
+  padding-left: 1em;
+  font-size: 1.2em;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #303436;
+  outline: none;
+}
+
