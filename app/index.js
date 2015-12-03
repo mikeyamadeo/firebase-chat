@@ -3,7 +3,7 @@ var app = window.angular.module('app', [])
 app.factory('chat', chat)
 app.controller('mainCtrl', mainCtrl)
 app.directive('message', message)
-app.value('db', function () {})
+app.value('db', {})
 
 var objToArray = function (obj) {
   return Object.keys(obj).map(function (key) {
@@ -22,7 +22,9 @@ function chat ($http, db) {
 }
 
 function mainCtrl ($scope, chat) {
+  $scope.username = ''
   $scope.msgs = []
+  $scope.joinChat = joinChat
   $scope.sendMessage = sendMessage
 
   chat.onNewMsg(displayNewMsg)
@@ -32,6 +34,10 @@ function mainCtrl ($scope, chat) {
 
     chat.send(form.body)
     form.body = ''
+  }
+
+  function joinChat (form) {
+    $scope.username = form.username
   }
 
   function displayNewMsg (msg) {
@@ -45,14 +51,14 @@ function mainCtrl ($scope, chat) {
 function message () {
   return {
     scope: {
-      body: '='
+      body: '=' /* [1] */
     },
-    restrict: 'E',
+    restrict: 'E', /* [2] */
     template: (
       '<div class="Message">' +
         '{{body}}' +
       '</div>'
-    )
+    ) /* [3] */
   }
 }
 

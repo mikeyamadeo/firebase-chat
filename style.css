@@ -5,10 +5,8 @@ html * {
 
 html, body, #app {
   height: 100%;
-  margin-bottom: 8em;
+  overflow: scroll;
 }
-
-
 
 .Message {
   color: white;
@@ -16,6 +14,7 @@ html, body, #app {
   background-color: #26CF28;
   margin: 8px 0;
   padding: 12px;
+  border-radius: 4px;
 }
 
 .message:last-child {
@@ -37,6 +36,33 @@ html, body, #app {
   justify-content: center;
 }
 
+.join {
+  padding: 40px;
+}
+
+.join > * {
+  display: block;
+  margin: 0 auto;
+}
+
+.join input {
+  font-size: 1.5em;
+}
+
+.join button {
+  padding: 8px;
+  margin-top: 12px;
+  background: transparent;
+  border: solid 1px black;
+  transition: .25s ease;
+  max-width: 250px;
+  width: 100px;
+}
+.join button:hover {
+  width: 500px;
+  cursor: pointer;
+}
+
 .text-input {
   width: 60%;
   padding: .5em;
@@ -53,3 +79,16 @@ html, body, #app {
   outline: none;
 }
 
+.messages {
+  padding: 12px;
+  list-style: none;
+}
+
+
+.login {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align: center;
+}
