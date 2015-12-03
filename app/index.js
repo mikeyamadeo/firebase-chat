@@ -32,7 +32,10 @@ function mainCtrl ($scope, chat) {
   function sendMessage (form) {
     if (!form.body) return
 
-    chat.send(form.body)
+    chat.send({
+      user: $scope.username,
+      body: form.body
+    })
     form.body = ''
   }
 

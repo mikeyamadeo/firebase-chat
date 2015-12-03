@@ -22,7 +22,7 @@
     <div ng-if='username'>
       <ul class='messages'>
         <li ng-repeat='msg in msgs track by $index' class='message'>
-          <message body='msg' ></message>
+          <message body='msg.body' ></message>
         </li>
       </ul>
       <div class='footer'>

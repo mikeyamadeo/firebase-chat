@@ -15,6 +15,7 @@ html, body, #app {
   margin: 8px 0;
   padding: 12px;
   border-radius: 4px;
+  font-family: arial;
 }
 
 .message:last-child {
